@@ -1,0 +1,14 @@
+directories:
+  output: dist
+  buildResources: build
+appId: com.revenuewell.messenger
+publish:
+  - provider: github
+    owner: fgilmetdinov
+    repo: electron-test
+    private: false
+win:
+  target: nsis
+mac:
+  category: cross-platform-desktop
+electronVersion: 2.0.0

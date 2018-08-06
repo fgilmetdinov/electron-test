@@ -5,9 +5,10 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "dist": "build"
+    "dist": "build",
+    "publish": "electron-builder -p always"
   },
-  "repository": "https://github.com/electron/electron-quick-start",
+  "repository": "https://github.com/fgilmetdinov/electron-test",
   "keywords": [
     "Electron",
     "quick",
@@ -23,12 +24,19 @@
   },
   "build": {
     "appId": "com.revenuewell.messenger",
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "fgilmetdinov",
+        "repo": "electron-test",
+        "private":false
+      }
+    ],
     "win": {
-      "target": "nsis",
-      "publish": ["github"]
+      "target": "nsis"
     },
     "mac": {
       "category": "cross-platform-desktop"
-    },  
+    }
   }
 }
